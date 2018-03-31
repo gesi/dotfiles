@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Updating the yadm repo origin URL"
+yadm remote set-url origin "git@github.com:gesi/dotfiles.git"
+
 osname=$(uname -s)
 
 if [ -f ~/.yadm/$osname.sh ]; then
