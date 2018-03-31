@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+osname=$(uname -s)
+
+if [ -f ~/.yadm/$osname.sh ]; then
+  ~/.yadm/$osname.sh
+else
+  echo "Bootstrap file for $osname not found"
+  exit 1
+fi
