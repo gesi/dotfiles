@@ -1,0 +1,31 @@
+{
+  "workbench.colorTheme": "Moonlight II Italic",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 2,
+  "prettier.singleQuote": true,
+  "vim.overrideCopy": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "window.zoomLevel": 1,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.jsxSingleQuote": true,
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "prettier.eslintIntegration": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "*.yaml": true
+  },
+  "editor.formatOnSave": true
+}
