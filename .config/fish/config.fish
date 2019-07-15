@@ -3,7 +3,8 @@ set fish_greeting ""
 
 set -gx PATH \
   $PATH \
-  $HOME/bin
+  $HOME/bin \
+  $HOME/.yarn/bin
 
 if test (uname) = "Darwin"
   source ~/.config/fish/darwin.fish
