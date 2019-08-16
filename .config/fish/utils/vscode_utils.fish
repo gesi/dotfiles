@@ -1,6 +1,6 @@
 set extension_file $HOME/.vscode/extensions.txt
 function vscode_save_extensions --on-event sync_vscode_extensions -d "Saves all installed extensions to $extension_file"
-  code --list-extensions > extensions.txt
+  code --list-extensions > $extension_file
 end
 
 function vscode_install_extension -d "Wraps `code --install-extension` and saves all installed extensions to $extension_file"
