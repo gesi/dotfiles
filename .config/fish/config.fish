@@ -1,12 +1,14 @@
-# Silence greeting'
+# Silence greeting
 set fish_greeting ""
 
 set -gx PATH \
   $PATH \
-  $HOME/bin
+  $HOME/bin \
+  $HOME/.yarn/bin
 
 if test (uname) = "Darwin"
   source ~/.config/fish/darwin.fish
+  nvm
 end
 
 set -l kube_configs ~/.kube/configs
@@ -21,5 +23,15 @@ if test -d $utils
   end
 end
 
-nvm
+# Abbreviations
 
+## Git
+abbr -a gco  git checkout
+abbr -a gc   git commit
+abbr -a gs   git status
+abbr -a gpl  git pull
+abbr -a gp   git push
+abbr -a gst  git stash
+
+abbr -a ll   ls -l
+abbr -a lla  ls -la 
