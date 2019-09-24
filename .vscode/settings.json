@@ -27,5 +27,6 @@
   "files.exclude": {
     "*.yaml": true
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "prettier.semi": false
 }
