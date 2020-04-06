@@ -4,6 +4,7 @@ akamud.vscode-javascript-snippet-pack
 ardenivanov.svelte-intellisense
 atomiks.moonlight
 bierner.lit-html
+bungcip.better-toml
 CoenraadS.bracket-pair-colorizer-2
 cpylua.language-postcss
 dbaeumer.vscode-eslint
@@ -12,6 +13,7 @@ eamodio.gitlens
 eg2.tslint
 esbenp.prettier-vscode
 file-icons.file-icons
+fivethree.vscode-svelte-snippets
 GrapeCity.gc-excelviewer
 JamesBirtles.svelte-vscode
 jaspernorth.vscode-pigments
@@ -27,6 +29,7 @@ ricard.postcss
 RobbOwen.synthwave-vscode
 romanresh.testcafe-test-runner
 skyapps.fish-vscode
+slevesque.shader
 teabyii.ayu
 Tobermory.es6-string-html
 vscodevim.vim
