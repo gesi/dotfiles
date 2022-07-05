@@ -112,15 +112,42 @@ in {
         # Set a blazingly fast keyboard repeat rate
         KeyRepeat = 1;
         InitialKeyRepeat = 10;
+
+        AppleShowAllExtensions = true;
+
       };
 
       dock = {
         autohide = true;
         showhidden = true;
         launchanim = false;
+
+        tilesize = 36;
       };
 
-      finder = { };
+      finder = {
+        QuitMenuItem = true;
+        ShowStatusBar = true;
+        ShowPathbar = true;
+
+        _FXShowPosixPathInTitle = true;
+        # currently not in nix-darwin
+        # _FXSortFoldersFirst = true;
+
+        # When performing a search, search the current folder by default
+        FXDefaultSearchScope = "SCcf";
+
+        # Disable the warning when changing a file extension
+        FXEnableExtensionChangeWarning = false;
+
+        # Use list view in all Finder windows by default
+        # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
+        FXPreferredViewStyle = "Nlsv";
+
+        # Disable the warning before emptying the Trash
+        # Currently not working in nix-darwin
+        # WarnOnEmptyTrash = false;
+      };
     };
 
     keyboard = {
