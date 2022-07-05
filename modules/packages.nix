@@ -4,6 +4,7 @@ with pkgs; [
   # nix stuff
   nixfmt
 
+  alacritty
   fish
   # terminal colors
   grc

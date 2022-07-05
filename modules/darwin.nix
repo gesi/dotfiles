@@ -79,7 +79,14 @@ in {
       '';
     };
 
-    skhd = { enable = true; };
+    skhd = {
+      enable = true;
+      package = pkgs.skhd;
+      skhdConfig = ''
+        # open terminal
+        cmd - return : alacritty
+      '';
+    };
   };
 
   nixpkgs = {
@@ -103,6 +110,11 @@ in {
 
   system = {
     stateVersion = 4;
+
+    activationScripts.postActivation.text = ''
+      # Set the default shell as fish for the user.
+      sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish ${name}
+    '';
 
     defaults = {
       NSGlobalDomain = {
