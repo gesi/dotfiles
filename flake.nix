@@ -13,6 +13,12 @@
     # home-manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # yabai
+    yabai = {
+      url = "github:koekeishiya/yabai";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }:
@@ -30,6 +36,8 @@
           specialArgs = { inherit inputs nixpkgs; };
         };
     in {
-      darwinConfigurations = { nrk = mkDarwinConfig { extraModules = [ ]; }; };
+      darwinConfigurations = {
+        nrk = mkDarwinConfig { extraModules = [ ./overlays/yabai.nix ]; };
+      };
     };
 }

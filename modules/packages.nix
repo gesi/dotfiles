@@ -35,6 +35,7 @@ with pkgs; [
   # azure-cli
   google-cloud-sdk
   vault
+  lastpass-cli
 
   # GIS
   # gdal
@@ -44,4 +45,5 @@ with pkgs; [
 
   # editor stuff
   vscode
+
 ]

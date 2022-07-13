@@ -37,7 +37,7 @@ in {
     activate-system.enable = true;
 
     yabai = {
-      enable = false;
+      enable = true;
       package = pkgs.yabai;
       enableScriptingAddition = true;
       config = {
@@ -64,7 +64,7 @@ in {
         mouse_action1 = "move";
         mouse_action2 = "resize";
         layout = "bsp";
-        top_padding = 36;
+        top_padding = 10;
         bottom_padding = 10;
         left_padding = 10;
         right_padding = 10;
@@ -72,10 +72,9 @@ in {
       };
 
       extraConfig = ''
-        # rules
         yabai -m rule --add app='System Preferences' manage=off
-
-        # Any other arbitrary config here
+        yabai -m rule --add app='Activity Monitor' manage=off
+        yabai -m rule --add app='alacritty' manage=on
       '';
     };
 
@@ -85,6 +84,17 @@ in {
       skhdConfig = ''
         # open terminal
         cmd - return : alacritty
+
+        # spaces
+        alt - tab : yabai -m space --focus recent
+        alt - 1   : yabai -m space --focus 1
+        alt - 2   : yabai -m space --focus 2
+        alt - 3   : yabai -m space --focus 3
+        alt - 4   : yabai -m space --focus 4
+        alt - 5   : yabai -m space --focus 5
+        alt - 6   : yabai -m space --focus 6
+        alt - 7   : yabai -m space --focus 7
+        alt - 8   : yabai -m space --focus 8
       '';
     };
   };
@@ -176,11 +186,16 @@ in {
   homebrew = {
     enable = true;
 
+    taps = [ ];
+
     brews = [
       "mas"
 
       # Install azure-cli with homebrew since pyopenssl is broken in nix
       "azure-cli"
+
+      # PostgreSQL for the same reason as azure-cli
+      "postgresql"
 
       "volta"
     ];
@@ -188,7 +203,12 @@ in {
     casks = [
       # password manager
       "1password"
+      # 1password cli is available in nix, but biometric unlock won't work
+      # when the binary is located on the /nix volume
       "1password-cli"
+
+      # not available in nix for m1
+      "spotify"
 
       # chats
       "slack"
@@ -198,6 +218,8 @@ in {
       "google-chrome"
       "firefox"
 
+      # gfx
+      "adobe-creative-cloud"
     ];
 
     masApps = { };
