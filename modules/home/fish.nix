@@ -19,6 +19,9 @@
     abbr -a ktx   kubectx 
     abbr -a kns   kubens
 
+    # starship prompt
+    starship init fish | source
+
     # homebrew
     eval "$(/opt/homebrew/bin/brew shellenv)"
 

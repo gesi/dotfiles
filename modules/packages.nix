@@ -8,6 +8,7 @@ with pkgs; [
   fish
   # terminal colors
   grc
+  starship
   tmux
 
   git
