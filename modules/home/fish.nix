@@ -5,6 +5,8 @@
     # Silence greeting
     set fish_greeting ""
 
+    set -gx PATH $HOME/dotfiles/bin $PATH
+
     abbr -a gco   git checkout
     abbr -a gc    git commit
     abbr -a gs    git status
