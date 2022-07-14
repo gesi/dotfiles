@@ -1,7 +1,9 @@
 #! /usr/bin/env osascript
 
-tell application "System Events"
-  tell appearance preferences
-    set dark mode to true
+on run yepnope
+  tell application "System Events"
+    tell appearance preferences
+      set dark mode to {yepnope}
+    end tell
   end tell
-end tell
+end run
