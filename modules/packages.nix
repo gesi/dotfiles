@@ -11,6 +11,8 @@ with pkgs; [
   starship
   tmux
 
+  jetbrains-mono
+
   git
   direnv
 
@@ -18,12 +20,12 @@ with pkgs; [
   fzf
   fasd
 
-  imagemagick
   ffmpeg
 
   bottom
   ripgrep
   jq
+  jless
 
   # languages
   python311

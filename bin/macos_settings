@@ -1,0 +1,2 @@
+# disable boot sound
+sudo nvram SystemAudioVolume=" "

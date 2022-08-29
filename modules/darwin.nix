@@ -189,6 +189,9 @@ in {
     taps = [ ];
 
     brews = [
+      "imagemagick"
+      "ghostscript"
+
       "mas"
 
       # Install azure-cli with homebrew since pyopenssl is broken in nix
@@ -213,6 +216,7 @@ in {
       # chats
       "slack"
       "discord"
+      "microsoft-teams"
 
       # browsers
       "google-chrome"
@@ -220,6 +224,7 @@ in {
 
       # gfx
       "adobe-creative-cloud"
+      "blender"
     ];
 
     masApps = { };
