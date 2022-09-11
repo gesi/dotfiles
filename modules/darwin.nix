@@ -74,7 +74,8 @@ in {
       extraConfig = ''
         yabai -m rule --add app='System Preferences' manage=off
         yabai -m rule --add app='Activity Monitor' manage=off
-        yabai -m rule --add app='alacritty' manage=on
+        yabai -m rule --add app='alacritty' manage=off
+        yabai -m rule --add app="Creative Cloud" manage=off
       '';
     };
 
@@ -84,6 +85,7 @@ in {
       skhdConfig = ''
         # open terminal
         cmd - return : alacritty
+
 
         # spaces
         alt - tab : yabai -m space --focus recent
@@ -186,6 +188,8 @@ in {
   homebrew = {
     enable = true;
 
+    cleanup = "uninstall";
+
     taps = [ ];
 
     brews = [
@@ -201,6 +205,14 @@ in {
       "postgresql"
 
       "volta"
+
+      "brightness"
+
+      "gnumeric"
+
+      # broken in nix
+      "gdal"
+
     ];
 
     casks = [
@@ -225,6 +237,10 @@ in {
       # gfx
       "adobe-creative-cloud"
       "blender"
+
+      "microsoft-office"
+
+      "qgis"
     ];
 
     masApps = { };

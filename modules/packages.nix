@@ -14,6 +14,7 @@ with pkgs; [
   jetbrains-mono
 
   git
+  git-crypt
   direnv
 
   fzy
@@ -22,10 +23,20 @@ with pkgs; [
 
   ffmpeg
 
-  bottom
-  ripgrep
   jq
   jless
+
+  # replace boomer apps
+  # delta
+  bottom
+  ripgrep
+  exa
+  bat
+  fd
+  sd
+
+  # better psql
+  # pgcli
 
   # languages
   python311
@@ -48,5 +59,7 @@ with pkgs; [
 
   # editor stuff
   vscode
+
+  nerdfonts
 
 ]

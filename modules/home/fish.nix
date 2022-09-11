@@ -5,6 +5,8 @@
     # Silence greeting
     set fish_greeting ""
 
+    fish_vi_key_bindings
+
     set -gx PATH $HOME/dotfiles/bin $PATH
 
     abbr -a gco   git checkout
@@ -30,7 +32,16 @@
     # volta
     set -gx VOLTA_HOME $HOME/.volta
     set -gx PATH $VOLTA_HOME/bin $PATH
+
+    for f in $HOME/dotfiles/env/*.fish;
+      source $f
+    end
   '';
 
-  shellAliases = { wpw = "op item get jobb --fields label=password | pbcopy"; };
+  shellAliases = {
+    wpw = "op item get jobb --fields label=password | pbcopy";
+    jless = "jless --mode line";
+    grep = "rg";
+    ls = "exa";
+  };
 }
