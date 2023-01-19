@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+jq -r -f ~/dotfiles/jq/to_csv.jq

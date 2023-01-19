@@ -36,8 +36,6 @@
           specialArgs = { inherit inputs nixpkgs; };
         };
     in {
-      darwinConfigurations = {
-        nrk = mkDarwinConfig { extraModules = [ ./overlays/yabai.nix ]; };
-      };
+      darwinConfigurations = { nrk = mkDarwinConfig { extraModules = [ ]; }; };
     };
 }

@@ -4,7 +4,7 @@
       nur.overlay
       (final: prev: {
         yabai = let
-          version = "4.0.1";
+          version = "5.0.1";
           buildSymlinks = prev.runCommand "build-symlinks" { } ''
             mkdir -p $out/bin
             ln -s /usr/bin/xcrun /usr/bin/xcodebuild /usr/bin/tiffutil /usr/bin/qlmanage $out/bin

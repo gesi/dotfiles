@@ -14,7 +14,7 @@ in {
 
   home-manager = {
     useGlobalPkgs = true;
-    users.${name} = { imports = [ ./home.nix ]; };
+    users.${name} = { imports = [ ./home ]; };
   };
 
   nix = {
@@ -27,9 +27,12 @@ in {
     '';
     useDaemon = true;
 
-    # sysctl -n hw.ncpu
-    maxJobs = 10;
-    buildCores = 10;
+    settings = {
+      # sysctl -n hw.ncpuA
+
+      max-jobs = 10;
+      cores = 10;
+    };
   };
 
   services = {
@@ -72,10 +75,11 @@ in {
       };
 
       extraConfig = ''
-        yabai -m rule --add app='System Preferences' manage=off
-        yabai -m rule --add app='Activity Monitor' manage=off
-        yabai -m rule --add app='alacritty' manage=off
+        yabai -m rule --add app="System Preferences" manage=off
+        yabai -m rule --add app="Activity Monitor" manage=off
+        yabai -m rule --add app="kitty" manage=on
         yabai -m rule --add app="Creative Cloud" manage=off
+        yabai -m rule --add app="vscode" manage=on
       '';
     };
 
@@ -84,7 +88,7 @@ in {
       package = pkgs.skhd;
       skhdConfig = ''
         # open terminal
-        cmd - return : alacritty
+        cmd - return : kitty --single-instance
 
 
         # spaces
@@ -188,9 +192,17 @@ in {
   homebrew = {
     enable = true;
 
-    cleanup = "uninstall";
+    onActivation = {
+      cleanup = "uninstall";
+      upgrade = true;
+    };
 
-    taps = [ ];
+    taps = [
+      "homebrew/cask"
+      "Azure/kubelogin"
+
+      #{ name = ""; clone_target = "git uri"; force_auto_update = true; }
+    ];
 
     brews = [
       "imagemagick"
@@ -200,9 +212,20 @@ in {
 
       # Install azure-cli with homebrew since pyopenssl is broken in nix
       "azure-cli"
+      "kubelogin"
+
+      "podman"
+      "kind"
+      "act"
 
       # PostgreSQL for the same reason as azure-cli
-      "postgresql"
+      {
+        name = "postgresql@15";
+        restart_service = true;
+        start_service = true;
+        # link = true;
+        conflicts_with = [ "postgresql" ];
+      }
 
       "volta"
 
@@ -212,7 +235,6 @@ in {
 
       # broken in nix
       "gdal"
-
     ];
 
     casks = [
@@ -230,9 +252,12 @@ in {
       "discord"
       "microsoft-teams"
 
+      "kitty"
+
       # browsers
       "google-chrome"
       "firefox"
+      "opera"
 
       # gfx
       "adobe-creative-cloud"
@@ -241,6 +266,9 @@ in {
       "microsoft-office"
 
       "qgis"
+
+      "figma"
+
     ];
 
     masApps = { };

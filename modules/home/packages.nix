@@ -4,7 +4,6 @@ with pkgs; [
   # nix stuff
   nixfmt
 
-  alacritty
   fish
   # terminal colors
   grc
@@ -23,8 +22,14 @@ with pkgs; [
 
   ffmpeg
 
+  # JSON is life
   jq
+  jo
   jless
+
+  pup
+  ministat
+  goaccess
 
   # replace boomer apps
   # delta
@@ -35,11 +40,18 @@ with pkgs; [
   fd
   sd
 
+  # neovim
+
   # better psql
-  # pgcli
+  pgcli
 
   # languages
+  # python
   python311
+  # rust
+  rustc
+  cargo
+  rustfmt
 
   # kubernetes
   kubectl
