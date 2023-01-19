@@ -1,2 +1,2 @@
-env/*.crypt.fish filter=git-crypt diff=git-crypt
+fish/*.crypt.fish filter=git-crypt diff=git-crypt
 modules/*.crypt.nix filter=git-crypt diff=git-crypt
