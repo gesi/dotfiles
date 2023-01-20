@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+key_file=/tmp/git-crypt-key
+# get the key from 1password
+op document get "dotfiles-git-crypt-key" --output $key_file
+# unlock git-crypt
+git-crypt unlock $key_file
+# cleanup
+rm $key_file
