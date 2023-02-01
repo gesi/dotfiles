@@ -42,6 +42,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 set -gx VOLTA_HOME $HOME/.volta
 set -gx PATH $VOLTA_HOME/bin $PATH
 
+set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
+
 # podman api forwarding
 set -gx DOCKER_HOST "unix:///$HOME/.local/share/containers/podman/podman.sock"
 

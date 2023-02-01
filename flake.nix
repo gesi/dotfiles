@@ -3,7 +3,7 @@
 
   inputs = {
     # Use latest/nixpkgs and/or NUR
-    nixpkgs.url = "github:nixos/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nur.url = "github:nix-community/nur";
 
     # nix-darwin
