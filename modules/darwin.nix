@@ -2,7 +2,7 @@
 
 let
   user = builtins.getEnv "USER";
-  name = if builtins.elem user [ "" "root" ] then "helge" else user;
+  name = if builtins.elem user [ "" "root" ] then "helge.silset" else user;
 in {
 
   # nix-darwin configuration
@@ -255,9 +255,9 @@ in {
       "kitty"
 
       # browsers
-      "google-chrome"
+      #"google-chrome"
       "firefox"
-      "opera"
+      
 
       # gfx
       "adobe-creative-cloud"
