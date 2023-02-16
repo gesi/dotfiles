@@ -60,8 +60,10 @@ with pkgs; [
   # broken atm
   # azure-cli
 
-  (google-cloud-sdk.withExtraComponents
-    [ google-cloud-sdk.components.gke-gcloud-auth-plugin ])
+  (google-cloud-sdk.withExtraComponents [
+    google-cloud-sdk.components.gke-gcloud-auth-plugin
+    google-cloud-sdk.components.bq
+  ])
 
   vault
   lastpass-cli

@@ -45,7 +45,7 @@ set -gx PATH $VOLTA_HOME/bin $PATH
 set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 
 # podman api forwarding
-set -gx DOCKER_HOST "unix:///$HOME/.local/share/containers/podman/podman.sock"
+set -gx DOCKER_HOST "unix:///$HOME/.local/share/containers/podman/machine/podman.sock"
 
 # pg
 fish_add_path /opt/homebrew/opt/postgresql@15/bin
