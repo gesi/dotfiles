@@ -18,7 +18,7 @@ nix build ~/dotfiles\#darwinConfigurations.$HOST.system \
     --extra-experimental-features flakes
 
 
-darwin-rebuild ~/dotfiles#$HOST
+darwin-rebuild switch --flake ~/dotfiles#$HOST
 
 # install latest nodejs
 volta install node

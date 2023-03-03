@@ -41,6 +41,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # volta
 set -gx VOLTA_HOME $HOME/.volta
 set -gx PATH $VOLTA_HOME/bin $PATH
+set -gx VOLTA_FEATURE_PNPM 1
 
 set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 

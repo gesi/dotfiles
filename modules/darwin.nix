@@ -2,7 +2,7 @@
 
 let
   user = builtins.getEnv "USER";
-  name = if builtins.elem user [ "" "root" ] then "helge.silset" else user;
+  name = if builtins.elem user [ "" "root" ] then "helge" else user;
 in {
 
   # nix-darwin configuration
@@ -34,6 +34,8 @@ in {
       cores = 10;
     };
   };
+
+  security.pam.enableSudoTouchIdAuth = true;
 
   services = {
     nix-daemon.enable = true;
@@ -75,11 +77,19 @@ in {
       };
 
       extraConfig = ''
-        yabai -m rule --add app="System Preferences" manage=off
-        yabai -m rule --add app="Activity Monitor" manage=off
-        yabai -m rule --add app="kitty" manage=on
+        # Unload the macOS WindowManager process
+        launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
+
+        yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+        sudo yabai --load-sa
+
+        # off
         yabai -m rule --add app="Creative Cloud" manage=off
-        yabai -m rule --add app="vscode" manage=on
+        yabai -m rule --add app="^Install macOS" manage=off
+        yabai -m rule --add app="^(Calculator|Software Update|Dictionary|VLC|System Preferences|Photo Booth|Archive Utility|Python|App Store|Alfred|Activity Monitor)$" manage=off
+        yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+        yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+        yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
       '';
     };
 
@@ -117,10 +127,7 @@ in {
     overlays = [ ];
   };
 
-  programs = {
-    fish.enable = true;
-
-  };
+  programs = { fish.enable = true; };
 
   environment.shells = with pkgs; [ fish ];
 
@@ -199,6 +206,7 @@ in {
 
     taps = [
       "homebrew/cask"
+      "homebrew/services"
       "Azure/kubelogin"
 
       #{ name = ""; clone_target = "git uri"; force_auto_update = true; }
@@ -257,7 +265,6 @@ in {
       # browsers
       #"google-chrome"
       "firefox"
-      
 
       # gfx
       "adobe-creative-cloud"

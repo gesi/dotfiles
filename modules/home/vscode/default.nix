@@ -27,6 +27,8 @@
         ms-azuretools.vscode-docker
         rust-lang.rust-analyzer
 
+        mechatroner.rainbow-csv
+
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
         name = "jq-syntax-highlighting";
         publisher = "jq-syntax-highlighting";
