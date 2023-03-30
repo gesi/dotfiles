@@ -276,6 +276,8 @@ in {
 
       "figma"
 
+      "audacity"
+
     ];
 
     masApps = { };
