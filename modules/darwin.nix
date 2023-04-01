@@ -258,7 +258,7 @@ in {
       # chats
       "slack"
       "discord"
-      "microsoft-teams"
+      # "microsoft-teams"
 
       "kitty"
 
@@ -267,16 +267,16 @@ in {
       "firefox"
 
       # gfx
-      "adobe-creative-cloud"
+      # "adobe-creative-cloud"
       "blender"
 
-      "microsoft-office"
+      # "microsoft-office"
 
       "qgis"
 
       "figma"
 
-      "audacity"
+      # "audacity"
 
     ];
 
