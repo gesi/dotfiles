@@ -48,6 +48,7 @@ with pkgs; [
   # languages
   # python
   python311
+  poetry
   # rust
   rustc
   cargo
