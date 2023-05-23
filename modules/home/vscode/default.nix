@@ -22,19 +22,36 @@
         dbaeumer.vscode-eslint
 
         # other languages/misc
-        skyapps.fish-vscode
+        bmalehorn.vscode-fish
         mikestead.dotenv
         ms-azuretools.vscode-docker
         rust-lang.rust-analyzer
 
+        # blender scripting
+        ms-python.python
+
         mechatroner.rainbow-csv
 
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [{
-        name = "jq-syntax-highlighting";
-        publisher = "jq-syntax-highlighting";
-        version = "0.0.2";
-        sha256 = "0q91mr6a6935wnka5iga97lv78g19dlj2rz6qg3ki6w3kdlvw2h7";
-      }];
+      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "jq-syntax-highlighting";
+          publisher = "jq-syntax-highlighting";
+          version = "0.0.2";
+          sha256 = "0q91mr6a6935wnka5iga97lv78g19dlj2rz6qg3ki6w3kdlvw2h7";
+        }
+        {
+          name = "blender-development";
+          publisher = "JacquesLucke";
+          version = "0.0.18";
+          sha256 = "0yypd0wkwlk112qdsn8aaabqsqhlg2l63i3mq0j7qk73k5yavz0b";
+        }
+        {
+          name = "cpptools";
+          publisher = "ms-vscode";
+          version = "1.15.4";
+          sha256 = "09m78zjphipjzwsf8p5q56ryjay106rmv8bv25653cbql80ipn4m";
+        }
+      ];
 
     userSettings = {
       "terminal.integrated.defaultProfile.osx" = "fish";
