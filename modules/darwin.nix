@@ -280,7 +280,10 @@ in {
 
     ];
 
-    masApps = { QuickShade = 931571202; };
+    masApps = {
+      QuickShade = 931571202;
+      Xcode = 497799835;
+    };
   };
 
 }
