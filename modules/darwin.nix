@@ -2,7 +2,7 @@
 
 let
   user = builtins.getEnv "USER";
-  name = if builtins.elem user [ "" "root" ] then "helge" else user;
+  name = if builtins.elem user [ "" "root" ] then "helge.silset" else user;
 in {
 
   # nix-darwin configuration
@@ -213,7 +213,6 @@ in {
     ];
 
     brews = [
-      "imagemagick"
       "ghostscript"
 
       "mas"

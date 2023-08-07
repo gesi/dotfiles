@@ -21,6 +21,7 @@ with pkgs; [
   fasd
 
   ffmpeg
+  imagemagick
 
   # JSON is life
   jq
@@ -28,8 +29,8 @@ with pkgs; [
   jless
 
   pup
-  ministat
-  goaccess
+  # ministat
+  # goaccess
 
   # replace boomer apps
   # delta
@@ -50,9 +51,9 @@ with pkgs; [
   python311
   poetry
   # rust
-  rustc
-  cargo
-  rustfmt
+  # rustc
+  # cargo
+  # rustfmt
 
   # kubernetes
   kubectl
@@ -79,5 +80,4 @@ with pkgs; [
   vscode
 
   nerdfonts
-
 ]
