@@ -10,10 +10,13 @@ with pkgs; [
   starship
   tmux
 
+  tree
+
   jetbrains-mono
 
   git
   git-crypt
+  git-lfs
   direnv
 
   fzy
@@ -36,10 +39,12 @@ with pkgs; [
   # delta
   bottom
   ripgrep
-  exa
+  eza
   bat
   fd
   sd
+
+  rsync
 
   # neovim
 
@@ -50,6 +55,8 @@ with pkgs; [
   # python
   python311
   poetry
+
+  go
   # rust
   # rustc
   # cargo
@@ -68,7 +75,7 @@ with pkgs; [
   ])
 
   vault
-  lastpass-cli
+  # lastpass-cli
 
   # GIS
   # gdal

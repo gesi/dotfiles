@@ -1,4 +1,14 @@
 
+#    ▄████████  ▄█     ▄████████    ▄█    █▄    
+#   ███    ███ ███    ███    ███   ███    ███   
+#   ███    █▀  ███▌   ███    █▀    ███    ███   
+#  ▄███▄▄▄     ███▌   ███         ▄███▄▄▄▄███▄▄ 
+# ▀▀███▀▀▀     ███▌ ▀███████████ ▀▀███▀▀▀▀███▀  
+#   ███        ███           ███   ███    ███   
+#   ███        ███     ▄█    ███   ███    ███   
+#   ███        █▀    ▄████████▀    ███    █▀    
+
+
 # Silence greeting
 set fish_greeting ""
 
@@ -6,7 +16,7 @@ fish_vi_key_bindings
 
 set -gx PATH $HOME/dotfiles/bin $PATH
 
-# abbreviations
+# git
 abbr -a gco git checkout
 abbr -a gc git commit
 abbr -a gs git status
@@ -52,6 +62,11 @@ set -gx DOCKER_HOST "unix:///$HOME/.local/share/containers/podman/machine/podman
 
 # pg
 fish_add_path /opt/homebrew/opt/postgresql@15/bin
+
+# direnv
+direnv hook fish | source
+set -g direnv_fish_mode eval_on_arrow
+
 
 for f in $HOME/dotfiles/fish/**/*.fish
     source $f

@@ -51,6 +51,12 @@
           version = "1.15.4";
           sha256 = "09m78zjphipjzwsf8p5q56ryjay106rmv8bv25653cbql80ipn4m";
         }
+        {
+          name = "eskip";
+          publisher = "boopathi";
+          version = "0.0.8";
+          sha256 = "01vi3b3gfksblb2vph56pghpjpswmswjp4xy8cf7pdl57mb2i3gl";
+        }
       ];
 
     userSettings = {

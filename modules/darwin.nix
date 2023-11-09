@@ -229,6 +229,9 @@ in {
       "kind"
       "act"
 
+      "lastpass-cli"
+      "akamai"
+
       # PostgreSQL for the same reason as azure-cli
       {
         name = "postgresql@15";
