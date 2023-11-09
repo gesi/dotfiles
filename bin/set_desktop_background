@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+
+set -l file (random choice ~/dotfiles/wallpapers/**)
+osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"$file\" as POSIX file"

@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1688307440,
-        "narHash": "sha256-7PTjbN+/+b799YN7Tk2SS5Vh8A0L3gBo8hmB7Y0VXug=",
+        "lastModified": 1699437533,
+        "narHash": "sha256-lMoPz9c89CpPVuJ95OFFesM9JagCF0soGbQatj3ZhqM=",
         "owner": "lnl7",
         "repo": "nix-darwin",
-        "rev": "b06bab83bdf285ea0ae3c8e145a081eb95959047",
+        "rev": "eb2b9b64238349bd351561e32e260cac15db6f9a",
         "type": "github"
       },
       "original": {
@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1688302761,
-        "narHash": "sha256-YIYKeX3YfoAIg9DTe6cl1ga87rDCNDZugdGuqsvEN30=",
+        "lastModified": 1699368917,
+        "narHash": "sha256-nUtGIWf86BOkUbtksWtfglvCZ/otP0FTZlQH8Rzc7PA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c85d9137db45a1c9c161f4718b13cc3bd4cbd173",
+        "rev": "6a8444467c83c961e2f5ff64fb4f422e303c98d3",
         "type": "github"
       },
       "original": {
@@ -42,11 +42,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1688221086,
-        "narHash": "sha256-cdW6qUL71cNWhHCpMPOJjlw0wzSRP0pVlRn2vqX/VVg=",
+        "lastModified": 1699343069,
+        "narHash": "sha256-s7BBhyLA6MI6FuJgs4F/SgpntHBzz40/qV0xLPW6A1Q=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "cd99c2b3c9f160cd004318e0697f90bbd5960825",
+        "rev": "ec750fd01963ab6b20ee1f0cb488754e8036d89d",
         "type": "github"
       },
       "original": {
@@ -58,11 +58,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1688367691,
-        "narHash": "sha256-ClWBF/L+cM6I8qY/6p2O0t7cUXw/ym0hrMLn2TAVGhc=",
+        "lastModified": 1699526829,
+        "narHash": "sha256-JfVNjqhnAEV8ErhdXjwhdXyU0IkeBf47GPwROcHC8Og=",
         "owner": "nix-community",
         "repo": "nur",
-        "rev": "651010a24f5ad24acf706d29a6c868c72733d3c5",
+        "rev": "178ad5f314bfdb34bf59327bb303d076d5490205",
         "type": "github"
       },
       "original": {
@@ -83,11 +83,11 @@
     "yabai": {
       "flake": false,
       "locked": {
-        "lastModified": 1686762228,
-        "narHash": "sha256-IHqEDAQDgMm+f8uWYl7ZgtIwJOeUp1TB9NC7rGmvt0g=",
+        "lastModified": 1699268473,
+        "narHash": "sha256-GbI8fMFURkmiTOjEamOp3LE6kSPFTKYBt0PO95sB2Rg=",
         "owner": "koekeishiya",
         "repo": "yabai",
-        "rev": "df94ce05a297c1e62ff1eaa1f8354fcf2193126c",
+        "rev": "b7d569ab04564c4bf35456bc8930fd0a1444cb15",
         "type": "github"
       },
       "original": {

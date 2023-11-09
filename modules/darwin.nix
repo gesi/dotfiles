@@ -137,6 +137,9 @@ in {
     activationScripts.postActivation.text = ''
       # Set the default shell as fish for the user.
       sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish ${name}
+
+      # Set desktop background
+      ~/dotfiles/bin/set_desktop_background
     '';
 
     defaults = {
