@@ -19,10 +19,6 @@ abbr -a cat bat
 abbr -a ll ls -l
 abbr -a lla ls -la
 
-abbr -a k kubectl
-abbr -a ktx kubectx
-abbr -a kns kubens
-
 # aliases
 alias wpw "op read op://personal/jobb/password --no-newline | pbcopy"
 alias jless "jless --mode line"
@@ -31,6 +27,12 @@ alias ls exa
 alias pbclear "echo -n '' | pbcopy"
 alias pn pnpm
 
+# kubernetes
+kubectl completion fish | source
+
+abbr -a k kubectl
+abbr -a ktx kubectx
+abbr -a kns kubens
 
 # starship prompt
 starship init fish | source

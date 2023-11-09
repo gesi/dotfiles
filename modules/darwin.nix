@@ -211,6 +211,7 @@ in {
       "homebrew/cask"
       "homebrew/services"
       "Azure/kubelogin"
+      "nrkno/hylla"
 
       #{ name = ""; clone_target = "git uri"; force_auto_update = true; }
     ];
@@ -245,6 +246,8 @@ in {
 
       # broken in nix
       "gdal"
+
+      "nrk8s"
     ];
 
     casks = [
