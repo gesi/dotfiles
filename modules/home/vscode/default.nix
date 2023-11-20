@@ -107,6 +107,8 @@
       "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
       "vscode-neovim.neovimExecutablePaths.darwin" =
         "/Users/helge/.nix-profile/bin/nvim";
+
+      "gitlens.ai.experimental.generateCommitMessage.enabled" = false;
     };
   };
 }
