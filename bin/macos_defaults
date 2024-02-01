@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# disable boot sound
+sudo nvram SystemAudioVolume=" "
+

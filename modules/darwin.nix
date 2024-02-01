@@ -139,7 +139,10 @@ in {
       sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish ${name}
 
       # Set desktop background
-      ~/dotfiles/bin/set_desktop_background
+      # /Users/${name}/dotfiles/bin/set_desktop_background
+
+      # Update macos defaults not supported by `system.defaults`
+      /Users/${name}/dotfiles/bin/macos_defaults
     '';
 
     defaults = {
