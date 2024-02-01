@@ -32,6 +32,10 @@
 
         mechatroner.rainbow-csv
 
+        ms-azuretools.vscode-docker
+        golang.go
+
+
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "jq-syntax-highlighting";
@@ -56,6 +60,12 @@
           publisher = "boopathi";
           version = "0.0.8";
           sha256 = "01vi3b3gfksblb2vph56pghpjpswmswjp4xy8cf7pdl57mb2i3gl";
+        }
+        {
+          name = "varnish-configuration-language";
+          publisher = "audun-ytterdal";
+          version = "0.5.2";
+          sha256 = "19q9y5qig03yqycjy9rpnhmpp1b8km3r782qqn5k5p7xa4ar6lal";
         }
       ];
 

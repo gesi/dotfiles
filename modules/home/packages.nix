@@ -53,8 +53,7 @@ with pkgs; [
 
   # languages
   # python
-  python311
-  poetry
+  python3
 
   go
   # rust

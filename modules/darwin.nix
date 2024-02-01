@@ -150,12 +150,11 @@ in {
         # Disable press-and-hold for keys in favor of key repeat
         ApplePressAndHoldEnabled = false;
 
-        # Set a blazingly fast keyboard repeat rate
+        # Machine gun keys
         KeyRepeat = 1;
         InitialKeyRepeat = 10;
 
         AppleShowAllExtensions = true;
-
       };
 
       dock = {
@@ -222,6 +221,8 @@ in {
       "ghostscript"
 
       "mas"
+
+      "openssl"
 
       # Install azure-cli with homebrew since pyopenssl is broken in nix
       "azure-cli"
