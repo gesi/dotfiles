@@ -4,6 +4,8 @@ with pkgs; [
   # nix stuff
   nixfmt
 
+  kitty
+
   fish
   # terminal colors
   grc
@@ -61,12 +63,20 @@ with pkgs; [
   # cargo
   # rustfmt
 
+  # docker replacement
+  podman
+  # local kube cluster
+  kind
+  act
+
   # kubernetes
   kubectl
   kubectx
   stern
-  # broken atm
-  # azure-cli
+
+  # cloud provider clis
+  azure-cli
+  kubelogin
 
   (google-cloud-sdk.withExtraComponents [
     google-cloud-sdk.components.gke-gcloud-auth-plugin
@@ -77,13 +87,15 @@ with pkgs; [
   # lastpass-cli
 
   # GIS
-  # gdal
+  gdal
 
   # databases
   # postgresql
 
   # editor stuff
   vscode
+
+  spotify
 
   nerdfonts
 ]

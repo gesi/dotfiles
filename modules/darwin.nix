@@ -224,15 +224,6 @@ in {
 
       "openssl"
 
-      # Install azure-cli with homebrew since pyopenssl is broken in nix
-      "azure-cli"
-      "kubelogin"
-
-      "podman"
-      "kind"
-      "act"
-
-      "lastpass-cli"
       "akamai"
 
       # PostgreSQL for the same reason as azure-cli
@@ -250,9 +241,6 @@ in {
 
       "gnumeric"
 
-      # broken in nix
-      "gdal"
-
       "nrk8s"
     ];
 
@@ -263,15 +251,10 @@ in {
       # when the binary is located on the /nix volume
       "1password-cli"
 
-      # not available in nix for m1
-      "spotify"
-
       # chats
       "slack"
       "discord"
       # "microsoft-teams"
-
-      "kitty"
 
       # browsers
       #"google-chrome"
@@ -286,9 +269,6 @@ in {
       "qgis"
 
       "figma"
-
-      # "audacity"
-
     ];
 
     masApps = {
