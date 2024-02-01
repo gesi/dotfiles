@@ -208,7 +208,6 @@ in {
     };
 
     taps = [
-      "homebrew/cask"
       "homebrew/services"
       "Azure/kubelogin"
       "nrkno/hylla"
