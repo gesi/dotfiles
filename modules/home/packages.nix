@@ -84,7 +84,7 @@ with pkgs; [
   ])
 
   vault
-  # lastpass-cli
+  lastpass-cli
 
   # GIS
   gdal

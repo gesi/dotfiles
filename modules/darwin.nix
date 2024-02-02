@@ -254,7 +254,7 @@ in {
       # chats
       "slack"
       "discord"
-      # "microsoft-teams"
+      "microsoft-teams"
 
       # browsers
       #"google-chrome"

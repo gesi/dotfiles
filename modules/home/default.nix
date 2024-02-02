@@ -1,6 +1,6 @@
 # home manager
 { config, lib, pkgs, ... }: {
-  imports = [ ./git ./nvim ./fish ./vscode ./direnv ];
+  imports = [ ./git ./nvim ./fish ./vscode ./direnv ./ssh ];
 
   home = {
     stateVersion = "23.05";
