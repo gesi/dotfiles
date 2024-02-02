@@ -49,12 +49,12 @@
           version = "0.0.18";
           sha256 = "0yypd0wkwlk112qdsn8aaabqsqhlg2l63i3mq0j7qk73k5yavz0b";
         }
-        {
-          name = "cpptools";
-          publisher = "ms-vscode";
-          version = "1.15.4";
-          sha256 = "09m78zjphipjzwsf8p5q56ryjay106rmv8bv25653cbql80ipn4m";
-        }
+        #	{
+        #	  name = "cpptools";
+        #	  publisher = "ms-vscode";
+        #	  version = "1.15.4";
+        #	  sha256 = "09m78zjphipjzwsf8p5q56ryjay106rmv8bv25653cbql80ipn4m";
+        #	}
         {
           name = "eskip";
           publisher = "boopathi";

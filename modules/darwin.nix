@@ -2,7 +2,7 @@
 
 let
   user = builtins.getEnv "USER";
-  name = if builtins.elem user [ "" "root" ] then "helge.silset" else user;
+  name = if builtins.elem user [ "" "root" ] then "helge" else user;
 in {
 
   # nix-darwin configuration
@@ -212,7 +212,7 @@ in {
     taps = [
       "homebrew/services"
       "Azure/kubelogin"
-      "nrkno/hylla"
+      # "nrkno/hylla"
 
       #{ name = ""; clone_target = "git uri"; force_auto_update = true; }
     ];
@@ -241,7 +241,7 @@ in {
 
       "gnumeric"
 
-      "nrk8s"
+      # "nrk8s"
     ];
 
     casks = [

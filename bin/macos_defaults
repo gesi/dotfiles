@@ -3,3 +3,4 @@
 # disable boot sound
 sudo nvram SystemAudioVolume=" "
 
+defaults write com.apple.dock "mru-spaces" -bool "false"
