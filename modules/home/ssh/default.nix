@@ -1,6 +1,6 @@
 {
   programs.ssh = {
-    enabled = true;
+    enable = true;
     extraConfig = builtins.readFile ./config;
   };
 }
