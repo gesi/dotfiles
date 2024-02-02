@@ -212,7 +212,6 @@ in {
     taps = [
       "homebrew/services"
       "Azure/kubelogin"
-      # "nrkno/hylla"
 
       #{ name = ""; clone_target = "git uri"; force_auto_update = true; }
     ];
@@ -240,8 +239,6 @@ in {
       "brightness"
 
       "gnumeric"
-
-      # "nrk8s"
     ];
 
     casks = [
